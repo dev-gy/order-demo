@@ -20,13 +20,13 @@ import java.util.UUID;
 public class Member {
     @Id
     @Column(nullable = false)
-    private UUID id;
+    private UUID member_id;
     @Column(nullable = false)
     private String name;
-    @Column(nullable = false)
+    @Column(unique = true)
     private String email;
     @CreatedDate
-    private LocalDateTime createdDate;
+    private LocalDateTime createdAt;
     @LastModifiedDate
-    private LocalDateTime lastModifiedDate;
+    private LocalDateTime lastModifiedAt;
 }
